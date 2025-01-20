@@ -39,9 +39,19 @@ struct TippingView: View {
                 .font(.headline)
             HStack{
                 Button(action:{
-                    serviceQuality = 1
+                    serviceQuality = 2
                 } , label:{
-                    Text("face.smiling")
+                    Image( systemName: ("face.frowning"))
+                })
+                Button(action:{
+                    serviceQuality = 2
+                } , label:{
+                    Image(systemName: "face.smiling")
+                })
+                Button(action:{
+                    serviceQuality = 3
+                } , label:{
+                    Image(systemName:"face.smiling")
                 })
             }
                 HStack{
