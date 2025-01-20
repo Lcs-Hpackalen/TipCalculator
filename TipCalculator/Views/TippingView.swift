@@ -30,28 +30,35 @@ struct TippingView: View {
         VStack {
             HStack{
                 Text("Tip calculator")
-                    .font(.title)
+                    .font(.largeTitle)
                     .fontWeight(.bold)
                 Spacer()
             }
             .padding()
             Text("service was...")
-                .font(.headline)
+                .font(.title2)
             HStack{
                 Button(action:{
-                    serviceQuality = 2
+                    serviceQuality = 1
                 } , label:{
-                    Image( systemName: ("face.frowning"))
+                    Image ( "SadFace")
+                        .resizable()
+                        .scaledToFit()
                 })
-                Button(action:{
-                    serviceQuality = 2
-                } , label:{
-                    Image(systemName: "face.smiling")
-                })
+                 
+                    Button(action:{
+                        serviceQuality = 2
+                    } , label:{
+                        Image( "StraightFace")
+                            .resizable()
+                            .scaledToFit()
+                    })
                 Button(action:{
                     serviceQuality = 3
                 } , label:{
-                    Image(systemName:"face.smiling")
+                    Image( "HappyFace")
+                        .resizable()
+                        .scaledToFit()
                 })
             }
                 HStack{
