@@ -10,10 +10,22 @@ import SwiftUI
 struct TippingView: View {
     //Mark: Stored properties
     @State var tip: Double = 0.0
-    @State var serviceQuality: String = []
+    @State var serviceQuality: Int = 2
     
     //Mark: Computed properties
-    
+    var recomendedTip: String {
+        if serviceQuality == 1 {
+            return ("10-15 %")
+        }
+        else if serviceQuality == 2
+                    {
+            return ("15-18 %")
+        }
+        else {
+            return ("18-25 %")
+        }
+        
+        }
     var body: some View {
         VStack {
             HStack{
@@ -27,13 +39,13 @@ struct TippingView: View {
                 .font(.headline)
             HStack{
                 Button(action:{
-                    
+                    serviceQuality = 1
                 } , label:{
                     Text("face.smiling")
                 })
             }
                 HStack{
-                    Text("Recomended tip: \()")
+                    Text("Recomended tip: \(recomendedTip)")
             }
         }
         .padding()
