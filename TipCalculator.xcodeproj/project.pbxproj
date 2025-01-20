@@ -6,17 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F486C2272D3E8E5F0095AFBE /* TippingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486C2242D3E8E5F0095AFBE /* TippingView.swift */; };
+		F486C2282D3E8E5F0095AFBE /* TipCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486C2252D3E8E5F0095AFBE /* TipCalculatorApp.swift */; };
+		F486C2292D3E8E5F0095AFBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F486C2212D3E8E5F0095AFBE /* Preview Assets.xcassets */; };
+		F486C22A2D3E8E5F0095AFBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F486C2232D3E8E5F0095AFBE /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		F486C2102D3E8E1D0095AFBE /* TipCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F486C2212D3E8E5F0095AFBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F486C2232D3E8E5F0095AFBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F486C2242D3E8E5F0095AFBE /* TippingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TippingView.swift; sourceTree = "<group>"; };
+		F486C2252D3E8E5F0095AFBE /* TipCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculatorApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		F486C2122D3E8E1D0095AFBE /* TipCalculator */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = TipCalculator;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F486C20D2D3E8E1D0095AFBE /* Frameworks */ = {
@@ -32,7 +35,7 @@
 		F486C2072D3E8E1D0095AFBE = {
 			isa = PBXGroup;
 			children = (
-				F486C2122D3E8E1D0095AFBE /* TipCalculator */,
+				F486C2262D3E8E5F0095AFBE /* TipCalculator */,
 				F486C2112D3E8E1D0095AFBE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +46,33 @@
 				F486C2102D3E8E1D0095AFBE /* TipCalculator.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F486C2222D3E8E5F0095AFBE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F486C2212D3E8E5F0095AFBE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F486C2262D3E8E5F0095AFBE /* TipCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				F486C22B2D3E8E680095AFBE /* Views */,
+				F486C2222D3E8E5F0095AFBE /* Preview Content */,
+				F486C2232D3E8E5F0095AFBE /* Assets.xcassets */,
+				F486C2252D3E8E5F0095AFBE /* TipCalculatorApp.swift */,
+			);
+			path = TipCalculator;
+			sourceTree = "<group>";
+		};
+		F486C22B2D3E8E680095AFBE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F486C2242D3E8E5F0095AFBE /* TippingView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +89,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				F486C2122D3E8E1D0095AFBE /* TipCalculator */,
 			);
 			name = TipCalculator;
 			packageProductDependencies = (
@@ -109,6 +136,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F486C2292D3E8E5F0095AFBE /* Preview Assets.xcassets in Resources */,
+				F486C22A2D3E8E5F0095AFBE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F486C2272D3E8E5F0095AFBE /* TippingView.swift in Sources */,
+				F486C2282D3E8E5F0095AFBE /* TipCalculatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

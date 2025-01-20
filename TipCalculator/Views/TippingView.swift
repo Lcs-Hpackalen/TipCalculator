@@ -8,12 +8,23 @@
 import SwiftUI
 
 struct TippingView: View {
+    //Mark: Stored properties
+    let recommendedTips: [Double] = [0.1, 0.15, 0.2]
+    //Mark: Computed properties
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            HStack{
+                Text("Tip calculator")
+                    .font(.title)
+                    .fontWeight(.bold)
+                Spacer()
+            }
+            .padding()
+            Text("service was...")
+                .font(.headline)
+            HStack{
+                
+            }
         }
         .padding()
     }
