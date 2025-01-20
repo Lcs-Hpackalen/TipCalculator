@@ -9,8 +9,11 @@ import SwiftUI
 
 struct TippingView: View {
     //Mark: Stored properties
-    let recommendedTips: [Double] = [0.1, 0.15, 0.2]
+    @State var tip: Double = 0.0
+    @State var serviceQuality: String = []
+    
     //Mark: Computed properties
+    
     var body: some View {
         VStack {
             HStack{
@@ -23,7 +26,14 @@ struct TippingView: View {
             Text("service was...")
                 .font(.headline)
             HStack{
-                
+                Button(action:{
+                    
+                } , label:{
+                    Text("face.smiling")
+                })
+            }
+                HStack{
+                    Text("Recomended tip: \()")
             }
         }
         .padding()
