@@ -37,6 +37,7 @@ struct TippingView: View {
         }
         
         }
+    
     var body: some View {
         VStack {
             HStack{
@@ -91,7 +92,7 @@ struct TippingView: View {
                         .font(.system(size: 29))
                     TextField("Bill amount", value: $bill, format: .currency(code: "CAD"))
                         .textFieldStyle(.roundedBorder)
-                        .keyboardType(.numberPad)
+                        .keyboardType(UIKeyboardType.numbersAndPunctuation)
                         .padding(.horizontal)
                 }
                 Spacer()
