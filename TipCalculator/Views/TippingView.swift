@@ -84,10 +84,14 @@ struct TippingView: View {
                 VStack{
                     Text("Bill: \(bill.formatted(.currency(code:"CAD")))")
                         .font(.system(size: 29))
+                    TextField("Bill amount", value: $bill, format: .currency(code: "CAD"))
+                    .textFieldStyle(.roundedBorder)
+                    .keyboardType(.numberPad)
+                    .padding(.horizontal)
                 }
+                Spacer()
                 Text("Tip: \(tip.formatted(.percent))")
                     .font(.system(size: 29))
-                Spacer()
             }
             
         }
