@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TippingView: View {
     //Mark: Stored properties
-    @State var tip: Int = 0
+    @State var tip: Int = 15
     @State var serviceQuality: Int = 2
     @State var bill: Double = 22.50
     
