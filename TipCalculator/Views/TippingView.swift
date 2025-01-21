@@ -108,8 +108,16 @@ struct TippingView: View {
             Divider()
             HStack{
                 Text("Tip value: \(tipAmount.formatted(.currency(code:"CAD")))")
+                    .font(.system(size: 30))
                 Spacer()
             }
+            Spacer()
+            HStack{
+                Text("Total Bill: \(totalBill.formatted(.currency(code: "CAD")))")
+                    .font(.system(size: 30))
+                Spacer()
+            }
+            Spacer()
         }
         .padding()
     }
