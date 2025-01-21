@@ -9,13 +9,13 @@ import SwiftUI
 
 struct TippingView: View {
     //Mark: Stored properties
-    @State var tip: Double = 0.0
+    @State var tip: Int = 15
     @State var serviceQuality: Int = 2
     @State var bill: Double = 22.50
     
     //Mark: Computed properties
     var totalBill: Double {
-        return bill + (bill * (tip/100))
+        return bill + (bill * Double((tip/100)))
     }
     
     
@@ -56,14 +56,14 @@ struct TippingView: View {
                         .resizable()
                         .scaledToFit()
                 })
-                 
-                    Button(action:{
-                        serviceQuality = 2
-                    } , label:{
-                        Image( "StraightFace")
-                            .resizable()
-                            .scaledToFit()
-                    })
+                
+                Button(action:{
+                    serviceQuality = 2
+                } , label:{
+                    Image( "StraightFace")
+                        .resizable()
+                        .scaledToFit()
+                })
                 Button(action:{
                     serviceQuality = 3
                 } , label:{
@@ -72,10 +72,10 @@ struct TippingView: View {
                         .scaledToFit()
                 })
             }
-                HStack{
-                    Text("Recomended tip: \(recomendedTip)")
-                    
-                        .font(.system(size: 30))
+            HStack{
+                Text("Recomended tip: \(recomendedTip)")
+                
+                    .font(.system(size: 30))
             }
             Divider()
                 .bold()
@@ -85,15 +85,21 @@ struct TippingView: View {
                     Text("Bill: \(bill.formatted(.currency(code:"CAD")))")
                         .font(.system(size: 29))
                     TextField("Bill amount", value: $bill, format: .currency(code: "CAD"))
-                    .textFieldStyle(.roundedBorder)
-                    .keyboardType(.numberPad)
-                    .padding(.horizontal)
+                        .textFieldStyle(.roundedBorder)
+                        .keyboardType(.numberPad)
+                        .padding(.horizontal)
                 }
                 Spacer()
-                Text("Tip: \(tip.formatted(.percent))")
-                    .font(.system(size: 29))
+                VStack{
+                    Text("Tip: \(tip.formatted(.percent))")
+                        .font(.system(size: 29))
+                    HStack{
+                        Stepper( "",value: $tip, in: 0...100)
+                            .padding(.trailing)
+                        Spacer()
+                    }
+                }
             }
-            
         }
         .padding()
     }
