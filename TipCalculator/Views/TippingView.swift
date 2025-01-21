@@ -43,8 +43,11 @@ struct TippingView: View {
             .padding()
             Divider()
                 .bold()
-            Text("service was...")
-                .font(.title2)
+            HStack{
+                Text("service was...")
+                    .font(.title2)
+                Spacer()
+            }
             HStack{
                 Button(action:{
                     serviceQuality = 1
@@ -78,7 +81,11 @@ struct TippingView: View {
                 .bold()
                 .padding()
             HStack{
-                Text("Bill: \(bill.formatted(.currency(code:"CAD")))")
+                VStack{
+                    Text("Bill: \(bill.formatted(.currency(code:"CAD")))")
+                        .font(.system(size: 29))
+                }
+                Text("Tip: \(tip.formatted(.percent))")
                     .font(.system(size: 29))
                 Spacer()
             }
