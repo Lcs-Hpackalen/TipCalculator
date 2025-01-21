@@ -11,8 +11,14 @@ struct TippingView: View {
     //Mark: Stored properties
     @State var tip: Double = 0.0
     @State var serviceQuality: Int = 2
+    @State var bill: Double = 22.50
     
     //Mark: Computed properties
+    var totalBill: Double {
+        return bill + (bill * (tip/100))
+    }
+    
+    
     var recomendedTip: String {
         if serviceQuality == 1 {
             return ("10-15 %")
@@ -30,11 +36,13 @@ struct TippingView: View {
         VStack {
             HStack{
                 Text("Tip calculator")
-                    .font(.largeTitle)
+                    .font(.system(size: 45))
                     .fontWeight(.bold)
                 Spacer()
             }
             .padding()
+            Divider()
+                .bold()
             Text("service was...")
                 .font(.title2)
             HStack{
@@ -63,7 +71,18 @@ struct TippingView: View {
             }
                 HStack{
                     Text("Recomended tip: \(recomendedTip)")
+                    
+                        .font(.system(size: 30))
             }
+            Divider()
+                .bold()
+                .padding()
+            HStack{
+                Text("Bill: \(bill.formatted(.currency(code:"CAD")))")
+                    .font(.system(size: 29))
+                Spacer()
+            }
+            
         }
         .padding()
     }
