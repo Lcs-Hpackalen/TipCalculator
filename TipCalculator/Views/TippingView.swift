@@ -9,15 +9,20 @@ import SwiftUI
 
 struct TippingView: View {
     //Mark: Stored properties
-    @State var tip: Int = 15
+    @State var tip: Int = 0
     @State var serviceQuality: Int = 2
     @State var bill: Double = 22.50
     
     //Mark: Computed properties
-    var totalBill: Double {
-        return bill + (bill * Double((tip/100)))
+    var tipDecimal: Double {
+        return Double(tip)/100
     }
-    
+    var totalBill: Double {
+        return bill + (bill * tipDecimal)
+    }
+    var tipAmount: Double {
+        return (bill * Double(tipDecimal))
+    }
     
     var recomendedTip: String {
         if serviceQuality == 1 {
@@ -99,6 +104,11 @@ struct TippingView: View {
                         Spacer()
                     }
                 }
+            }
+            Divider()
+            HStack{
+                Text("Tip value: \(tipAmount.formatted(.currency(code:"CAD")))")
+                Spacer()
             }
         }
         .padding()
