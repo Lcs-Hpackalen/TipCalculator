@@ -33,7 +33,7 @@ struct TippingView: View {
             return ("15-18 %")
         }
         else {
-            return ("18-25 %")
+            return ("18-22 %")
         }
         
         }
