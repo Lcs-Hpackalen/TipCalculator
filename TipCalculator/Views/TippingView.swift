@@ -9,11 +9,12 @@ import SwiftUI
 
 struct TippingView: View {
     //Mark: Stored properties
-    @State var tip: Int = 15
     @State var serviceQuality: Int = 2
     @State var bill: Double = 22.50
+    @State var tip: Int = 15
     
     //Mark: Computed properties
+    
     var tipDecimal: Double {
         return Double(tip)/100
     }
@@ -23,7 +24,6 @@ struct TippingView: View {
     var tipAmount: Double {
         return (bill * Double(tipDecimal))
     }
-    
     var recomendedTip: String {
         if serviceQuality == 1 {
             return ("10-15 %")
@@ -37,7 +37,6 @@ struct TippingView: View {
         }
         
         }
-    
     var body: some View {
         VStack {
             HStack{
